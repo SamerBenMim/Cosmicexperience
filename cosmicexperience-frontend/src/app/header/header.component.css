@@ -27,21 +27,20 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
-  position: relative;
   bottom: 3rem;
   color: #fff;
 }
 .text h2 {
   letter-spacing: 3px;
   font-size: 5rem;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1em;
   text-transform: uppercase;
 }
 .text h3 {
   letter-spacing: 3px;
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1em;
   text-transform: uppercase;
 }
@@ -49,7 +48,8 @@
   font-size: 1.25em;
   margin: 20px 0;
   font-weight: 400;
-  max-width: 500px;
+  max-width: 850px;
+  text-align: justify;
 }
 
 .logo {
