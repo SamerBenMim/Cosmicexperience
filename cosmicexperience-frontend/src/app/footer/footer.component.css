@@ -1,0 +1,19 @@
+.dashboard-items p a {
+  font-size: 17px;
+}
+
+.dashboard-items p a:hover {
+  background-color: #4a91a5;
+  transition: all 0.3s ease-in-out;
+}
+.desc-text {
+  line-height: 1.75;
+  font-size: 16px;
+}
+.logo {
+  width: 200px;
+  height: auto;
+}
+.all-rights {
+  font-size: 17px;
+}

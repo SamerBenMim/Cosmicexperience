@@ -7,10 +7,12 @@ import { TestComponent } from './pages/test/test.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './header/header.component';  
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 import { ToolbarComponent } from './navigation/toolbar/toolbar.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     HomeComponent ,
     ToolbarComponent,
-    SidenavComponent
+    SidenavComponent,
+    FooterComponent
+    
   ],
   imports: [
     BrowserModule,
