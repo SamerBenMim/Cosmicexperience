@@ -10,9 +10,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
-import { GetUser } from 'src/users/auth/get-user.decorator';
-import { JwtAuthGuard } from 'src/users/auth/jwt-auth.guard';
-import { User } from 'src/users/user/entities/user.entity';
+
 import { EventService } from './events.service';
 import { CreateEventDto } from './dto/create-event.dto';
 import { UpdateEventDto } from './dto/update-event.dto';
