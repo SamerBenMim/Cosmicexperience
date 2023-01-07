@@ -8,14 +8,14 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./event.component.css'],
 })
 export class EventComponent implements OnInit {
-  id: number;
-  place: string;
-  image: string;
-  name: string;
-  date: string;
-  description: string;
-  price: number;
-  nbDays: number;
+  id!: number;
+  place!: string;
+  image!: string;
+  name!: string;
+  date!: string;
+  description!: string;
+  price!: number;
+  nbDays!: number;
 
   @Input() set event(value: any) {
     if (value) {

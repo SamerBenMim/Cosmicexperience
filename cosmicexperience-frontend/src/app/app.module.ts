@@ -27,7 +27,8 @@ import { EventComponent } from './upcoming-events/event/event.component';
     ToolbarComponent,
     SidenavComponent,
     FooterComponent,
-    UpcomingEventsComponent
+    UpcomingEventsComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
