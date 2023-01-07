@@ -26,4 +26,9 @@ export class EventController {
   findEventById(@Param('id', ParseIntPipe) id: number): Promise<Event> {
     return this.eventService.findEventById(id);
   }
+  @Delete(':id')
+  // @UseGuards(JwtAuthGuard)
+  deleteEventById(@Param('id', ParseIntPipe) id: number) {
+    return this.eventService.deleteEventById(id);
+  }
 }
