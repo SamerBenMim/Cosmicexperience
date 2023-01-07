@@ -10,6 +10,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
+import { User } from 'src/users/user/entities/user.entity';
 
 import { EventService } from './events.service';
 import { CreateEventDto } from './dto/create-event.dto';
@@ -31,4 +32,14 @@ export class EventController {
   deleteEventById(@Param('id', ParseIntPipe) id: number) {
     return this.eventService.deleteEventById(id);
   }
+  @Patch(':id')
+  // @UseGuards(JwtAuthGuard)
+  updateEventById(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() updateEventDto: UpdateEventDto,
+    @GetUser() user: User,
+  ): Promise<Event> {
+    return this.eventService.updateEventById(id, updateEventDto, user);
+  }
+
 }
