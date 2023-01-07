@@ -1,0 +1,10 @@
+<div data-aos="zoom-in" data-aos-duration="600" class="card-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm my-col" *ngFor="let item of displayed">
+        <app-event [event]="item"> </app-event>
+      </div>
+      <div class="row"></div>
+    </div>
+  </div>
+</div>

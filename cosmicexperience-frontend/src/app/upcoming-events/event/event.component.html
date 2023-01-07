@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img class="card-img-top image" src="{{ image }}" alt="Card image cap" />
+      <div class="bottom-left top">{{ name }}</div>
+      <div class="bottom-left bottom">{{ place }} {{ date | date }}</div>
+    </div>
+    <div class="flip-card-back">
+      <h1>{{ name }}</h1>
+      <h2>Location: {{ place }}</h2>
+      <h3>Starts on: {{ date | date }}</h3>
+      <h3>Lasts for: {{ nbDays }} days</h3>
+      <p>{{ description }}</p>
+      <div class="bottom-text">
+        <p>Price: {{ price }}</p>
+        <button mat-button class="button" (click)="openDialog()">
+          Join now!
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

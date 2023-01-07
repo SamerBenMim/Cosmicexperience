@@ -14,6 +14,8 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
+import { EventComponent } from './upcoming-events/event/event.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent ,
     ToolbarComponent,
     SidenavComponent,
-    FooterComponent
+    FooterComponent,
+    UpcomingEventsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,89 @@
+.card {
+  width: 300px;
+  height: 400px;
+  border:white;
+  perspective: 1000px;
+  background-color: transparent;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(43, 51, 58);
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+  padding-top:10%;
+}
+
+.button{
+    width: 100%;
+    margin:auto;
+    display: block;
+    padding:5px;
+    background-color: #4a91a5;
+    border-radius: 5px;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 2px;
+  left: 16px;
+  color: white;
+}
+
+.top {
+  bottom: 20px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.bottom {
+font-size: 15px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+}
+
+.image {
+width: 100%;
+height: 400px;
+border-radius: 5px;
+}
+
+.bottom-text{
+    position: absolute;
+    bottom: 2px;
+    color: white;
+    left: 35%;
+    bottom:20px;
+}
