@@ -19,7 +19,7 @@ import { Event } from './entities/event.entity';
 
 @Controller('cycling')
 export class EventController {
-  constructor(private readonly eventService: EventService) {}
+  constructor(private readonly eventService: EventService) { }
 
 
 
@@ -41,5 +41,9 @@ export class EventController {
   ): Promise<Event> {
     return this.eventService.updateEventById(id, updateEventDto, user);
   }
-
+  @Get('user')
+  // @UseGuards(AuthGuard())
+  getEventsForUser(@GetUser() user: User): Promise<Event[]> {
+    return this.eventService.getEventsForUser(user);
+  }
 }
