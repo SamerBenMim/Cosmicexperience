@@ -37,7 +37,7 @@ export class EventController {
   updateEventById(
     @Param('id', ParseIntPipe) id: number,
     @Body() updateEventDto: UpdateEventDto,
-    @GetUser() user: User,
+    // @GetUser() user: User,
   ): Promise<Event> {
     return this.eventService.updateEventById(id, updateEventDto, user);
   }
@@ -45,5 +45,28 @@ export class EventController {
   // @UseGuards(AuthGuard())
   getEventsForUser(@GetUser() user: User): Promise<Event[]> {
     return this.eventService.getEventsForUser(user);
+  }
+  // @UseGuards(JwtAuthGuard)
+  @Post('joinEvent/:id')
+  async joinEvent(
+    @GetUser() user: User,
+    @Param('id', ParseIntPipe) id: number,
+  ) {
+    return this.eventService.joinEvent(user, id);
+  }
+
+  @Get('all')
+  getAllEvents(): Promise<Event[]> {
+    return this.eventService.getAllEvents();
+  }
+
+  @Get('pastEvents')
+  async getPastEvents(): Promise<Event[]> {
+    return this.eventService.getPastEvents();
+  }
+
+  @Get('upComingEvents')
+  async getUpcomingEvents(): Promise<Event[]> {
+    return this.eventService.getUpcomingEvents();
   }
 }
