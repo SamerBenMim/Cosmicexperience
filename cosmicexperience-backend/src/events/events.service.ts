@@ -33,7 +33,7 @@ export class EventService {
       console.log(event.participants);
 
       //save it to the database
-      return await this.EventRepository.save(event);
+      return await this.EventRepository.save(event) ;
     } catch (error) {
       console.log(error);
       throw new UnauthorizedException("You're not authorized");
