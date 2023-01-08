@@ -36,7 +36,21 @@
     "passport-jwt": "^4.0.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
+<<<<<<< HEAD
     "rxjs": "^6.6.6",
+=======
+    "rxjs": "^7.2.0",
+    "@nestjs/jwt": "^7.2.0",
+    "@nestjs/mapped-types": "*",
+    "@nestjs/passport": "^7.1.5",
+    "@nestjs/typeorm": "^7.1.5",
+    "bcrypt": "^5.0.1",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+>>>>>>> b7647789cc5fac93ebf6a5fe1c473829cdf401a7
     "typeorm": "^0.2.34",
     "uuid": "^8.3.2"
   },
