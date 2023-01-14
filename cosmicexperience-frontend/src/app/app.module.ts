@@ -20,6 +20,8 @@ import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { OurMissionComponent } from './about-us/our-mission/our-mission.component';
 import { WhoAreWeComponent } from './about-us/who-are-we/who-are-we.component';
 
+import { ErrorPageComponent } from './error-page/error-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,10 +34,7 @@ import { WhoAreWeComponent } from './about-us/who-are-we/who-are-we.component';
     SidenavComponent,
     FooterComponent,
     UpcomingEventsComponent,
-    EventComponent,
-    AboutUsComponent,
-    WhoAreWeComponent,
-    OurMissionComponent
+    EventComponent
   ],
   imports: [
     BrowserModule,

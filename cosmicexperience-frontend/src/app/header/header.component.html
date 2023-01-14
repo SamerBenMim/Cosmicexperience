@@ -1,5 +1,7 @@
 <section class="showcase">
-  <video src="../../../assets/file.mp4" muted loop autoplay></video>
+  <video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
+    <source src="../../../assets/file.mp4" type="video/mp4">
+</video>
   <div class="overlay"></div>
   <div data-aos="fade-up" class="text">
     <h3 data-aos="fade-up">Explore</h3>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ErrorPageComponent } from './error-page/error-page.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -25,7 +26,7 @@ const routes: Routes = [
   },
   { path: 'events', component: EventComponent },
   { path: '', component: HomeComponent },
-  { path: '**', component: TestComponent },
+  { path: '**', component: ErrorPageComponent },
 ];
 
 @NgModule({

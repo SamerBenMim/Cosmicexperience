@@ -1,0 +1,53 @@
+.div-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5rem;
+}
+
+.div-text {
+  font-size: 50px;
+  margin: 2rem;
+}
+
+.div-text>p {
+  font-size: 50px;
+  margin-bottom: 2rem;
+  color: #182446;
+}
+
+img {
+  width: 150px;
+  height: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.button {
+  margin-bottom: 0.7rem;
+  background-color: #182446;
+  color: white;
+}
+
+@media screen and (max-width: 760px) {
+  .div-text>p {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .div-text>p {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .div-text>p {
+    font-size: 25px;
+    font-weight: 400;
+  }
+}
