@@ -1,0 +1,45 @@
+.model-container {
+  width: 500px;
+  
+  border: solid;
+  height: 300px;
+  display: block;
+  margin-top: 40px;
+  border-radius: 10px;
+  background-color: #232834; 
+}
+.model-text {
+  margin: 5px;
+  padding: 10px;
+}
+.model-text > h1 {
+  color: white;
+  font-size: 22px;
+text-align: center;
+margin-bottom: 22px;
+}
+.model-text > p {
+  font-size: 16px;
+  line-height: 1.75;
+color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .model-container {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+
+img {
+  border-radius:50%;
+  max-width: 60px;
+  max-height: 60px;
+  margin: 20px;
+  margin-top: 0px;
+}
+
+.photos{
+  text-align: center;  
+}

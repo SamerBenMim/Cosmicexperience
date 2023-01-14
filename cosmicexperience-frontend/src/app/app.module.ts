@@ -16,6 +16,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { EventComponent } from './upcoming-events/event/event.component';
+import { AboutUsComponent } from './about-us/about-us/about-us.component';
+import { OurMissionComponent } from './about-us/our-mission/our-mission.component';
+import { WhoAreWeComponent } from './about-us/who-are-we/who-are-we.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,10 @@ import { EventComponent } from './upcoming-events/event/event.component';
     SidenavComponent,
     FooterComponent,
     UpcomingEventsComponent,
-    EventComponent
+    EventComponent,
+    AboutUsComponent,
+    WhoAreWeComponent,
+    OurMissionComponent
   ],
   imports: [
     BrowserModule,

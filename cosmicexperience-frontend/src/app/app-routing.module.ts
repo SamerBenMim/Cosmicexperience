@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-
+import { EventComponent } from './upcoming-events/event/event.component';
 import { TestComponent } from './pages/test/test.component';
 
 const routes: Routes = [
@@ -23,7 +23,7 @@ const routes: Routes = [
     component: TestComponent,
 
   },
-  { path: 'events', component: TestComponent },
+  { path: 'events', component: EventComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: TestComponent },
 ];

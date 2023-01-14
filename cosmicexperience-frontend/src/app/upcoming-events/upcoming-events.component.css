@@ -24,8 +24,10 @@
 }
 
 .button {
-  width: 100px;
+  /* width: 100px; */
   margin: auto;
   display: block;
-  background-color: #4a91a5;
+  background-color: #27c1df;
+  font-size: 14px;
+  border: none;
 }
