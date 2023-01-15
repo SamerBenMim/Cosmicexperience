@@ -1,0 +1,100 @@
+<main class="main">
+    <img
+      src="../../../assets/images/AuthImages/registerback.jpg"
+      class="register-image"
+      alt=""
+    />
+    <div data-aos="zoom-in" data-aos-duration="600" class="register">
+      <h1 class="title">CREATE ACCOUNT</h1>
+  
+      <form class="credentials">
+        <input class="input">
+          <label>First Name</label>
+          <input
+            type="text"
+            name="firstName"
+            matInput
+            required
+            placeholder="First Name"
+          />
+       
+  
+        <input class="input">
+          <label>Last Name</label>
+          <input
+            name="lastName"
+            type="text"
+            required
+            matInput
+            placeholder="Last Name"
+          />
+
+        <input class="input">
+          <label>Username</label>
+          <input
+            name="username"
+            type="text"
+            required
+            matInput
+            placeholder="Username"
+          />
+ 
+  
+        <input class="input">
+          <label>Email</label>
+          <input
+         
+            name="email"
+            type="email"
+            required
+            matInput
+            placeholder="Ex. pat@example.com"
+          />
+    
+  
+        <input class="input">
+          <label>Password</label>
+          <input
+            name="password"
+            required
+            type="password"
+            matInput
+          />
+  
+        <input class="input">
+          <label>Date of birthday</label>
+          <input
+            type="date"
+            name="dateOfBirthday"
+            color="primary"
+            required
+            matInput
+            placeholder="Birthday Date"
+          />
+  
+        <!-- Error messages -->
+        <div class="error-message" *ngIf="errorsFromDb">
+          <p *ngFor="let error of errorsFromDb">{{ error }}</p>
+        </div>
+  
+        <div class="error-message" *ngIf="usernameError">
+          <p>{{ usernameError }}</p>
+        </div>
+  
+        <button
+          class="register-button"
+          mat-raised-button
+          color="primary"
+          (click)="register()"
+
+        >
+          Register
+        </button>
+      </form>
+      <p class="login-link">
+        Already have an account!
+        <a mat-raised-button routerLink="/login" color="primary"> Login</a>
+      </p>
+    </div>
+  </main>
+  
