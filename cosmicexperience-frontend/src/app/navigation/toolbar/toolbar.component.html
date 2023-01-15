@@ -1,0 +1,31 @@
+<mat-toolbar class="navbar-bg">
+  <div class="toggle-button">
+    <button mat-icon-button (click)="onTogglesidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <a routerLink="/" class="logo">
+    <img src="" alt ="logo"/>
+  </a>
+  <div class="spacer"></div>
+  <div class="links-for-pc links-nav-container">
+    <a routerLink="/" mat-button>Home</a>
+    <a routerLink="/events" mat-button>Events</a>
+    <a *ngIf="true" routerLink="/login" mat-button
+      >
+      <!-- <mat-icon>login</mat-icon> -->
+      Login</a
+    >
+    <a *ngIf="true" routerLink="/register" mat-button
+      >
+      <!-- <mat-icon>app_registration</mat-icon> -->
+      Register</a
+    >
+    <a *ngIf="false" routerLink="/profile" mat-button
+      ><mat-icon>account_circle</mat-icon>Profile</a
+    >
+    <a *ngIf="false" (click)="logout()" mat-button
+      ><mat-icon>logout</mat-icon>Logout</a
+    >
+  </div>
+</mat-toolbar>

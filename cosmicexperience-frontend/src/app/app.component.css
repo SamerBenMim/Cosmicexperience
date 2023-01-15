@@ -1,0 +1,14 @@
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  height: 100%;
+}
+mat-sidenav {
+  width: 250px;
+}
+
+@media only screen and (max-width: 450px) {
+  mat-sidenav {
+    width: 200px;
+  }
+}

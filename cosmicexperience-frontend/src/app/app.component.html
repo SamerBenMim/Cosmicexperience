@@ -1,2 +1,15 @@
 
-<router-outlet></router-outlet>
+
+<mat-sidenav-container>
+     <mat-sidenav class="navbar-bg" #sidenav role="navigation">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-toolbar></app-toolbar>
+        <main>
+            <router-outlet></router-outlet>
+             <!-- <app-footer></app-footer>  -->
+        </main>
+    </mat-sidenav-content> 
+
+</mat-sidenav-container>
