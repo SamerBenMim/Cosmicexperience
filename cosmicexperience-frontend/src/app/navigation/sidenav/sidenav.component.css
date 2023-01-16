@@ -1,0 +1,9 @@
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+
+.links-nav-container > a:hover {
+  background-color: #4a91a5;
+  transition: all 0.3s ease-in-out;
+}

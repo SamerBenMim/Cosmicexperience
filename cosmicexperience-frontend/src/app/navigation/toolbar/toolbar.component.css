@@ -1,0 +1,42 @@
+mat-toolbar {
+  display: flex;
+  padding: 0 3rem;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.logo > img {
+  width: 70px;
+  height: auto;
+}
+
+.toggle-button {
+  display: none;
+}
+
+.links-for-pc {
+  display: flex;
+}
+
+.links-for-pc > a:hover {
+  background-color: #4a91a5;
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 1100px) {
+  mat-toolbar {
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .links-for-pc {
+    display: none;
+  }
+}
