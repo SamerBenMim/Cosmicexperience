@@ -1,0 +1,11 @@
+<div class="image-container">
+  <img src="../../../../assets/img/uploads/{{ event?.image }}" />
+  <div class="image-text">
+    <h1>{{ event?.name }}</h1>
+    <p class="date"><mat-icon>event</mat-icon>{{ event?.date | date }}</p>
+    <p class="description">
+      {{ event?.description }}
+    </p>
+    <button class="button" mat-raised-button>Read More</button>
+  </div>
+</div>

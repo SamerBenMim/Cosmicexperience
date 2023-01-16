@@ -1,0 +1,113 @@
+<main class="main">
+  <img
+    src="../../../assets/img/header-imgs/2.jpg"
+    class="register-image"
+    alt=""
+  />
+  <div class="register">
+    <h1 class="title">CREATE EVENT</h1>
+
+    <form #registerForm="ngForm" class="credentials">
+      <mat-form-field class="input">
+        <mat-label>Event Name</mat-label>
+        <input
+          required
+          type="text"
+          [(ngModel)]="name"
+          name="eventName"
+          matInput
+          placeholder="Event Name"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Description</mat-label>
+        <textarea
+          required
+          [(ngModel)]="description"
+          name="description"
+          matInput
+          placeholder="Description"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Place</mat-label>
+        <input
+          required
+          type="text"
+          [(ngModel)]="place"
+          name="place"
+          matInput
+          placeholder="Place"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Date</mat-label>
+        <input
+          required
+          type="date"
+          [(ngModel)]="date"
+          name="date"
+          matInput
+          placeholder="Date"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Number of days</mat-label>
+        <input
+          required
+          type="number"
+          [(ngModel)]="numnberOfDays"
+          name="NumberOfDays"
+          matInput
+          placeholder="Number of days"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Number max of participants</mat-label>
+        <input
+          required
+          type="number"
+          [(ngModel)]="numberMaxOfParticipants"
+          name="numberMaxOfParticipants"
+          matInput
+          placeholder="Number of Participants"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Price</mat-label>
+        <input
+          required
+          type="number"
+          [(ngModel)]="price"
+          name="price"
+          matInput
+          placeholder="price"
+        />
+      </mat-form-field>
+
+      <input class="ng-hide" id="input-file-id" multiple type="file" />
+      <label for="input-file-id" class="md-button md-raised md-primary"
+        >Choose Image</label
+      >
+
+      <button
+        class="register-button"
+        mat-raised-button
+        color="primary"
+        type="button"
+        [disabled]="registerForm.form.invalid"
+        (click)="createEvent()"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</main>

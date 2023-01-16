@@ -17,6 +17,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { EventComponent } from './upcoming-events/event/event.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { ProfileComponent } from './profile/profile/profile.component';
+import { ProfileinfoComponent } from './profile/profileinfo/profileinfo.component';
+import { UpcomingeventsComponent } from './profile/upcomingevents/upcomingevents.component';
+import { PasteventsComponent } from './profile/pastevents/pastevents.component';
+import { LayoutComponent } from './profile/upcomingevents/layout/layout.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
+import { CreateEventComponent } from './profile/create-event/create-event.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +38,14 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     FooterComponent,
     UpcomingEventsComponent,
     EventComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    ProfileComponent,
+    ProfileinfoComponent,
+    UpcomingeventsComponent,
+    PasteventsComponent,
+    LayoutComponent,
+    EditProfileComponent,
+    CreateEventComponent
   ],
   imports: [
     BrowserModule,

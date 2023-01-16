@@ -1,0 +1,77 @@
+<main class="main">
+  <img
+    src="../../../assets/img/header-imgs/2.jpg"
+    class="register-image"
+    alt=""
+  />
+  <div class="register">
+    <h1 class="title">EDIT PROFILE</h1>
+
+    <form #registerForm="ngForm" class="credentials">
+      <mat-form-field class="input">
+        <mat-label>First Name</mat-label>
+        <input
+          type="text"
+          [(ngModel)]="firstName"
+          name="firstName"
+          matInput
+          placeholder="First Name"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Last Name</mat-label>
+        <input
+          [(ngModel)]="lastName"
+          name="lastName"
+          type="text"
+          matInput
+          placeholder="Last Name"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Username</mat-label>
+        <input
+          [(ngModel)]="username"
+          name="username"
+          type="text"
+          matInput
+          placeholder="Username"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Email</mat-label>
+        <input
+          [(ngModel)]="email"
+          name="email"
+          type="email"
+          matInput
+          placeholder="Ex. pat@example.com"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Password</mat-label>
+        <input
+          [(ngModel)]="password"
+          name="password"
+          type="password"
+          matInput
+        />
+      </mat-form-field>
+
+      <button
+        class="register-button"
+        mat-raised-button
+        color="primary"
+        type="button"
+        [disabled]="registerForm.form.invalid"
+        (click)="updateUserInformation()"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</main>
