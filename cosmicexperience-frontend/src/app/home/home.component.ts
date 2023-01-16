@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     document.querySelector("video")?.play()
-    console.log("aaaaaaaaaaaaaaa")
   }
 
 }
