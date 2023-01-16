@@ -1,0 +1,26 @@
+p {
+  text-align: center;
+  font-family: "Dancing Script", cursive !important;
+  font-size: 50px;
+  margin-bottom: 1.5rem;
+  color: #9c9c9ca2;
+}
+
+.container-upcoming {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.button {
+  margin-bottom: 2rem;
+  background-color: rgb(255, 207, 149);
+  color: black;
+  width: 300px;
+}
