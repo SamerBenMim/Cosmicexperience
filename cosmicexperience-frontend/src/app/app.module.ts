@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { EventComponent } from './upcoming-events/event/event.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { EventComponent } from './upcoming-events/event/event.component';
     SidenavComponent,
     FooterComponent,
     UpcomingEventsComponent,
-    EventComponent
+    EventComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
