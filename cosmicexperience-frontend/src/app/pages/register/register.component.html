@@ -1,0 +1,107 @@
+<main class="main">
+  <img
+    src="../../../assets/images/AuthImages/registerback.jpg"
+    class="register-image"
+    alt=""
+  />
+  <div data-aos="zoom-in" data-aos-duration="600" class="register">
+    <h1 class="title">CREATE ACCOUNT</h1>
+
+    <form #registerForm="ngForm" class="credentials">
+      <mat-form-field class="input">
+        <mat-label>First Name</mat-label>
+        <input
+          type="text"
+          [(ngModel)]="firstName"
+          name="firstName"
+          matInput
+          required
+          placeholder="First Name"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Last Name</mat-label>
+        <input
+          [(ngModel)]="lastName"
+          name="lastName"
+          type="text"
+          required
+          matInput
+          placeholder="Last Name"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Username</mat-label>
+        <input
+          [(ngModel)]="username"
+          name="username"
+          type="text"
+          required
+          matInput
+          placeholder="Username"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Email</mat-label>
+        <input
+          [(ngModel)]="email"
+          name="email"
+          type="email"
+          required
+          matInput
+          placeholder="Ex. pat@example.com"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Password</mat-label>
+        <input
+          [(ngModel)]="password"
+          name="password"
+          required
+          type="password"
+          matInput
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Date of birthday</mat-label>
+        <input
+          type="date"
+          [(ngModel)]="dateOfBirthday"
+          name="dateOfBirthday"
+          color="primary"
+          required
+          matInput
+          placeholder="Birthday Date"
+        />
+      </mat-form-field>
+
+      <!-- Error messages -->
+      <div class="error-message" *ngIf="errorsFromDb">
+        <p *ngFor="let error of errorsFromDb">{{ error }}</p>
+      </div>
+
+      <div class="error-message" *ngIf="usernameError">
+        <p>{{ usernameError }}</p>
+      </div>
+
+      <button
+        class="register-button"
+        mat-raised-button
+        color="primary"
+        (click)="register()"
+        [disabled]="registerForm.form.invalid"
+      >
+        Register
+      </button>
+    </form>
+    <p class="login-link">
+      Already have an account!
+      <a mat-raised-button routerLink="/login" color="primary"> Login</a>
+    </p>
+  </div>
+</main>

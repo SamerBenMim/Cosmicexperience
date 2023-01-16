@@ -1,1 +1,53 @@
-<p>login works!</p>
+<main class="main">
+  <img
+    src="../../../assets/images/AuthImages/authbackground.jpg"
+    class="login-image"
+    alt=""
+  />
+  <div data-aos="zoom-in" data-aos-duration="600" class="login">
+    <h1 class="title">Sign In</h1>
+
+    <form #loginForm="ngForm" class="credentials">
+      <mat-form-field class="input">
+        <mat-label>Username</mat-label>
+        <input
+          [(ngModel)]="username"
+          name="username"
+          type="text"
+          required
+          matInput
+          placeholder="Username"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Password</mat-label>
+        <input
+          [(ngModel)]="password"
+          name="password"
+          required
+          type="password"
+          matInput
+        />
+      </mat-form-field>
+
+      <div class="error-message" *ngIf="error">
+        <p>{{ error }}</p>
+      </div>
+
+      <button
+        class="login-button"
+        mat-raised-button
+        color="primary"
+        (click)="login()"
+        [disabled]="loginForm.form.invalid"
+      >
+        Login
+      </button>
+    </form>
+    <p class="register-link">
+      Don't have an account?
+      <a mat-raised-button routerLink="/register" color="primary"> Register</a>
+    </p>
+  </div>
+</main>
