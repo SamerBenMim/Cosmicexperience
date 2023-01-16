@@ -31,7 +31,7 @@ export class EventController {
     return this.eventService.joinEvent(user, id);
   }
 
-  @Get('all')
+  @Get('all') 
   getAllEvents(): Promise<Event[]> {
     return this.eventService.getAllEvents();
   }
@@ -58,7 +58,7 @@ export class EventController {
     @Body() createEventDto: CreateEventDto,
     @GetUser() user: User,
   ): Promise<Event> {
-    console.log("samer")
+
     return this.eventService.createEvent(createEventDto, user);
   }
 

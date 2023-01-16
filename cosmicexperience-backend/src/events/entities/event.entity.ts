@@ -26,7 +26,7 @@ export class Event {
   date: Date;
 
   @Column()
-  numnberOfDays: number; //9adeh men nhar
+  numnberOfDays: number; 
 
   @Column()
   numberMaxOfParticipants: number;

@@ -36,7 +36,7 @@ export class User {
   dateOfBirthday: Date;
 
   //bech tetbadel w tokhrej tableau wahadha
-  @Column()
+  @Column({default: 0 })
   rate: number;
 
   @OneToMany(() => Event, (event) => event.organiser, { eager: true })
