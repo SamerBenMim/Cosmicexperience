@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-// import { AuthService } from 'src/app/auth/auth.service';
+import { AuthService } from '../../../app/services/auth.service';
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
@@ -31,19 +31,19 @@ export class EventComponent implements OnInit {
   }
   constructor(
     public dialog: MatDialog,
-    // private authService: AuthService,
+    private authService: AuthService,
     private router: Router
   ) {}
 
   ngOnInit(): void {}
-  // openDialog() {
-  //   if (this.authService.isLogged()) {
-  //     // send a request with an id
-  //     this.dialog.open(DialogElementsExampleDialog);
-  //   } else {
-  //     this.router.navigate(['login']);
-  //   }
-  // }
+  openDialog() {
+    if (this.authService.isLogged()) {
+      // send a request with an id
+      this.dialog.open(DialogElementsExampleDialog);
+    } else {
+      this.router.navigate(['login']);
+    }
+  }
 }
 
 @Component({
