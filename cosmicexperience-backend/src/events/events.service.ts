@@ -54,6 +54,7 @@ export class EventService {
 
       return event;
     } catch (error) {
+      console.log(error)
       throw new BadRequestException('Cannot create event');
     }
   }

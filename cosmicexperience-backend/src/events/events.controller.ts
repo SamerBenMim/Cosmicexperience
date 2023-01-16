@@ -18,7 +18,7 @@ import { CreateEventDto } from './dto/create-event.dto';
 import { UpdateEventDto } from './dto/update-event.dto';
 import { Event } from './entities/event.entity';
 
-@Controller('cycling')
+@Controller('cosmic')
 export class EventController {
   constructor(private readonly eventService: EventService) {}
 
@@ -58,6 +58,7 @@ export class EventController {
     @Body() createEventDto: CreateEventDto,
     @GetUser() user: User,
   ): Promise<Event> {
+    console.log("samer")
     return this.eventService.createEvent(createEventDto, user);
   }
 
@@ -72,7 +73,7 @@ export class EventController {
   }
 
   @Delete(':id')
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   deleteEventById(@Param('id', ParseIntPipe) id: number) {
     return this.eventService.deleteEventById(id);
   }

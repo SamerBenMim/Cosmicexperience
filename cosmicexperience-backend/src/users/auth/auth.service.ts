@@ -49,6 +49,8 @@ export class AuthService {
   async signUp(createUserDto: CreateUserDto): Promise<any> {
     //create a salt for every user and hash the password
     const salt = await bcrypt.genSalt();
+    console.log(salt)
+    console.log(createUserDto.password)
     const password = await this.hashPassword(createUserDto.password, salt);
 
     //Check for duplicate users
@@ -56,6 +58,7 @@ export class AuthService {
       await this.userRepository.save({ ...createUserDto, salt, password });
       return { message: 'user has been created' };
     } catch (error) {
+      console.log(error)
       throw new ConflictException('Username already exists');
     }
   }
