@@ -1,0 +1,14 @@
+<div class="card">
+    <h1 class="card-title">Upcoming Events</h1>
+    <div class="card-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm my-col" *ngFor="let item of events">
+            <app-event [event] = "item"> </app-event>
+            </div>
+        <div class="row">
+        </div>
+      </div>
+    </div>
+    <button routerLink="/events" type="button" class="btn btn-secondary btn-lg button">See All</button>
+

@@ -1,0 +1,31 @@
+.card-title {
+  text-transform: uppercase;
+  font-weight: bolder;
+  position: relative;
+  font-size: 30px;
+  line-height: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.my-col {
+  /* float: left;*/
+  /*width: 25%; */
+  padding: 0 10px;
+  margin: 10px auto;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  padding: 20px;
+  margin: 0 -5px;
+  margin: auto;
+}
+
+.button {
+  width: 100px;
+  margin: auto;
+  display: block;
+  background-color: #4a91a5;
+}

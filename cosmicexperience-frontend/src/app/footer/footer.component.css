@@ -1,0 +1,36 @@
+.dashboard-items p  {
+  font-size: 12px;
+  
+}
+.mat-button{
+  line-height: 5px;
+}
+.dashboard-items p a:hover {
+  background-color: #232834;
+  transition: all 0.3s ease-in-out;
+  
+}
+.desc-text {
+  line-height: 1.5;
+  font-size: 13px;
+}
+.logo {
+  width: 100px;
+  height: auto;
+}
+.all-rights {
+  font-size: 12px;
+}
+
+.title{
+font-size: 18px;
+}
+
+.links{
+  padding-left: 10%;
+}
+
+.mat-icon {
+  font-size: 10px;
+  
+}
