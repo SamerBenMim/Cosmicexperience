@@ -10,7 +10,61 @@
   </a>
   <div class="spacer"><hr /></div>
   <div class="spacer"><hr /></div>
-  <a
+  <a> <mat-nav-list class="links-nav-container">
+    <a routerLink="/" mat-list-item (click)="onClose()">
+      <mat-icon>home</mat-icon>
+      <span class="nav-caption">Home</span>
+    </a>
+    <div class="spacer"><hr /></div>
+    <a routerLink="/events" mat-list-item (click)="onClose()">
+      <mat-icon>upcoming</mat-icon>
+      <span class="nav-caption">Events</span>
+    </a>
+    <div class="spacer"><hr /></div>
+    <div class="spacer"><hr /></div>
+    <a
+      routerLink="/login"
+      *ngIf="!authService.isLogged()"
+      mat-list-item
+      (click)="onClose()"
+    >
+      <mat-icon>login</mat-icon>
+      <span class="nav-caption">Login</span>
+    </a>
+  
+    <a
+      routerLink="/profile"
+      *ngIf="authService.isLogged()"
+      mat-list-item
+      (click)="onClose()"
+    >
+      <mat-icon>shopping_bag</mat-icon>
+      <span class="nav-caption">Profile</span>
+    </a>
+  
+    <div class="spacer"><hr /></div>
+    <a
+      routerLink="/register"
+      *ngIf="!authService.isLogged()"
+      mat-list-item
+      (click)="onClose()"
+    >
+      <mat-icon>person</mat-icon>
+      <span class="nav-caption">Register</span>
+    </a>
+  
+    <a
+      (click)="logout()"
+      *ngIf="authService.isLogged()"
+      mat-list-item
+      (click)="onClose()"
+    >
+      <mat-icon>logout</mat-icon>
+      <span class="nav-caption">Logout</span>
+    </a>
+    <div class="spacer"><hr /></div>
+  </mat-nav-list>
+  
     routerLink="/login"
     *ngIf="false"
     mat-list-item
