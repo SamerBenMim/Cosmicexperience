@@ -2,15 +2,17 @@ mat-form-field {
     margin-right: 12px;
 }
 
-.form{
-    padding-left:20%;
+.form {
     margin: auto;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
     color: white;
     background-color: #27c1df;
-    
-    
-  }
+
+
+}

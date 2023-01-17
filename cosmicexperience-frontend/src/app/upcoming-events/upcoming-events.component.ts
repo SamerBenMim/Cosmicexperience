@@ -16,7 +16,7 @@ export class UpcomingEventsComponent implements OnInit {
   }
 
   private sliced() {
-    this.events = this.all_events.slice(0, 6);
+    this.events = this.all_events.slice(0, 3);
   }
 
   private loadList() {

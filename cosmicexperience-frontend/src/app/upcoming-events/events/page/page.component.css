@@ -1,15 +1,12 @@
-.my-col{
-    /* float: left;*/
- /*width: 25%; */
-    padding: 0 10px; 
-    margin:10px auto;
-    }
-    
-     /* Remove extra left and right margins, due to padding in columns */
-    .row {
-    padding:20px;
-    margin: 0 -5px; 
-    margin: auto;
-    }
+.my-col {
+   display: flex;
+   justify-content: space-around;
+   padding: 0 10px;
+   margin: 10px auto;
+}
 
-    
+.row {
+   padding: 20px;
+   margin: 0 -5px;
+   margin: auto;
+}
