@@ -2,11 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { EventCycling } from '../models/event';
+import { EventCosmic } from '../models/event';
 import { User } from '../models/user';
 
 const link = 'http://localhost:3000/user';
-const linkEvent = 'http://localhost:3000/cycling';
+const linkEvent = 'http://localhost:3000/cosmos';
 
 @Injectable({
   providedIn: 'root',
@@ -28,7 +28,7 @@ export class ProfileService {
     this.router.navigate(['']);
   }
 
-  createEvent(event: EventCycling): void {
+  createEvent(event: EventCosmic): void {
     console.log(event);
     this.http.post(linkEvent, event).subscribe(
       (result) => { },
