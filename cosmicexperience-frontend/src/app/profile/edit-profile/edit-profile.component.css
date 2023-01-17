@@ -1,0 +1,95 @@
+.main {
+  display: flex;
+  width: 100%;
+  height: 92vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #55e7c754;
+}
+.register-image {
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.register {
+  width: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.credentials {
+  display: flex;
+  flex-direction: column;
+  width: 28rem;
+}
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.register-button {
+  margin-top: 1rem;
+  background-color: #6c8655;
+}
+
+.terms-services {
+  color: #858585;
+  font-size: 0.85rem;
+}
+
+.login-link {
+  margin-top: 2rem;
+}
+
+.login-link > a {
+  background-color: #6c8655;
+  margin-left: 0.4rem;
+  margin-right: 0.1rem;
+}
+
+.error-message p {
+  color: rgb(243, 67, 67);
+}
+
+/* Responsive for mobile */
+
+@media only screen and (max-width: 768px) {
+  .register {
+    width: 32rem;
+  }
+
+  .credentials {
+    width: 23rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .title {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .terms-services {
+    font-size: 0.7rem;
+  }
+
+  .register {
+    width: 80%;
+  }
+
+  .credentials {
+    width: 90%;
+  }
+}

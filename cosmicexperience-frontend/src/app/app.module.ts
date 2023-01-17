@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './pages/test/test.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HeaderComponent } from './header/header.component';  
@@ -21,11 +20,21 @@ import { OurMissionComponent } from './about-us/our-mission/our-mission.componen
 import { WhoAreWeComponent } from './about-us/who-are-we/who-are-we.component';
 import { QuoteComponent } from './quote/quote.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { ProfileComponent } from './profile/profile/profile.component';
+import { ProfileinfoComponent } from './profile/profileinfo/profileinfo.component';
+import { UpcomingeventsComponent } from './profile/upcomingevents/upcomingevents.component';
+import { PasteventsComponent } from './profile/pastevents/pastevents.component';
+import { LayoutComponent } from './profile/upcomingevents/layout/layout.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
+import { CreateEventComponent } from './profile/create-event/create-event.component';
+import { EventsComponent } from './upcoming-events/events/events.component';
+import { PageComponent } from './upcoming-events/events/page/page.component';
+
+import { FilterComponent } from './upcoming-events/events/filter/filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
     LoginComponent,
     RegisterComponent,
     HeaderComponent,
@@ -39,8 +48,17 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     ErrorPageComponent,
     WhoAreWeComponent,
     OurMissionComponent,
-    AboutUsComponent
-    
+    AboutUsComponent,
+    ProfileComponent,
+    ProfileinfoComponent,
+    UpcomingeventsComponent,
+    PasteventsComponent,
+    LayoutComponent,
+    EditProfileComponent,
+    CreateEventComponent,
+    EventsComponent,
+    PageComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

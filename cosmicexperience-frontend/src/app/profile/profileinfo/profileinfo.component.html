@@ -1,0 +1,42 @@
+<main class="profile-info">
+  <img src="../../../assets/img/profile-imgs/cover.jpg" class="bgProfile-img" />
+
+  <div data-aos="zoom-in" data-aos-duration="600" class="profile-image-name">
+    <div class="edit-profile">
+      <img
+        src="../../../assets/img/profile-imgs/profile.JPG"
+        class="profile-img"
+      />
+      <button
+        class="button"
+        (click)="editProfile()"
+        mat-raised-button
+        color="primary"
+      >
+        Edit profile
+      </button>
+      <button
+        class="button"
+        (click)="createEvent()"
+        mat-raised-button
+        color="primary"
+      >
+        Create Event
+      </button>
+    </div>
+    <h1 class="profile-name">{{ firstName }} {{ lastName }}</h1>
+  </div>
+  <div class="spacer"></div>
+  <div data-aos="zoom-in" data-aos-duration="600" class="data">
+    <div>
+      <p>50</p>
+      <span>Events</span>
+      <mat-icon>upcoming</mat-icon>
+    </div>
+    <div>
+      <p>8/10</p>
+      <span>Rates</span>
+      <mat-icon>trending_up</mat-icon>
+    </div>
+  </div>
+</main>

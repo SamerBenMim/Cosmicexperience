@@ -1,30 +1,35 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { LoginGuard } from './guards/login.guard';
+import { LogoutGuard } from './guards/logout.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { EventComponent } from './upcoming-events/event/event.component';
-import { TestComponent } from './pages/test/test.component';
-
+import { ProfileComponent } from './profile/profile/profile.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
+import { CreateEventComponent } from './profile/create-event/create-event.component';
+import { EventsComponent } from './upcoming-events/events/events.component';
 const routes: Routes = [
-  { path: 'login', component: LoginComponent    },
+  { path: 'login', component: LoginComponent },
   {
     path: 'register',
     component: RegisterComponent,
+    
   },
-  { path: 'profile', component: TestComponent },
+  { path: 'profile', component: ProfileComponent,
+   },
   {
     path: 'editProfile',
-    component: TestComponent,
-
+    component: EditProfileComponent,
+    // canActivate: [LoginGuard],
   },
   {
     path: 'createEvent',
-    component: TestComponent,
-
+    component: CreateEventComponent,
+    // canActivate: [LoginGuard],
   },
-  { path: 'events', component: EventComponent },
+  { path: 'events', component: EventsComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: ErrorPageComponent },
 ];
