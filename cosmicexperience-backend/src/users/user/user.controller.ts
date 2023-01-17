@@ -20,7 +20,7 @@ export class UserController {
     return this.userService.updateUser(user, updateUserDto);
   }
 
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   @Get('upComingEvent')
   async getUpComingEventsOfUser(@GetUser() user: User) {
     const events = await (
@@ -32,7 +32,7 @@ export class UserController {
     return events.filter((event) => event.date.getTime() > myDate.getTime());
   }
 
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   @Get('latestEvents')
   async getLatestEventsOfUser(@GetUser() user: User) {
     const events = await (

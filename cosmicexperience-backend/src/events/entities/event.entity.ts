@@ -19,19 +19,19 @@ export class Event {
   @Column()
   description: string;
 
-  @Column()
+  @Column( )
   place: string;
 
-  @Column()
+  @Column( )
   date: Date;
 
-  @Column()
+  @Column( { default: 0 })
   numnberOfDays: number; 
 
-  @Column()
+  @Column( { default: 0 })
   numberMaxOfParticipants: number;
 
-  @Column()
+  @Column( { default: 0 })
   numberOfParticipants: number;
 
   @Column()
