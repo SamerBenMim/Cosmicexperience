@@ -1,4 +1,4 @@
-export class EventCycling {
+export class EventCosmic {
   name: string;
   description: string;
   place: string;
