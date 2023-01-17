@@ -3,12 +3,12 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-color: #55e7c754;
+  
 }
 .register-image {
   width: 100%;
   object-fit: cover;
-  height: 100vh;
+  min-height: 220vh;
   position: absolute;
   z-index: -1;
 }
@@ -39,7 +39,7 @@
 
 .register-button {
   margin-top: 1rem;
-  background-color: #6c8655;
+  background-color: #27c1df;
 }
 
 .terms-services {
@@ -52,7 +52,7 @@
 }
 
 .login-link > a {
-  background-color: #6c8655;
+  background-color: #27c1df;
   margin-left: 0.4rem;
   margin-right: 0.1rem;
 }
