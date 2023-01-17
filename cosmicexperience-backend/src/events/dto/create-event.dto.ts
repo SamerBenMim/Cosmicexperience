@@ -3,7 +3,7 @@ export class CreateEventDto {
   description: string;
   place: string;
   date: Date;
-  numnberOfDays: number; 
+  numberOfDays: number; 
   numberMaxOfParticipants: number;
   price: number;
   image: string;

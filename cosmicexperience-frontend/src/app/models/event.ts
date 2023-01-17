@@ -3,7 +3,7 @@ export class EventCosmic {
   description: string;
   place: string;
   date: Date;
-  numnberOfDays: number;
+  numberOfDays: number;
   numberMaxOfParticipants: number;
   price: number;
   image: string;
@@ -13,7 +13,7 @@ export class EventCosmic {
     description: string,
     place: string,
     date: Date,
-    numnberOfDays: number,
+    numberOfDays: number,
     numberMaxOfParticipants: number,
     price: number,
     image: string
@@ -22,7 +22,7 @@ export class EventCosmic {
     this.description = description;
     this.place = place;
     this.date = date;
-    this.numnberOfDays = numnberOfDays;
+    this.numberOfDays = numberOfDays;
     this.numberMaxOfParticipants = numberMaxOfParticipants;
     this.price = price;
     this.image = image;

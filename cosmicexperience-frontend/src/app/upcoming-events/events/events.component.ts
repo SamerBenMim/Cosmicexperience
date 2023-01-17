@@ -50,19 +50,20 @@ export class EventsComponent implements OnInit {
   }
 
   filterDisplayed(object: any) {
-    this.displayed_events = this.displayed_events.filter((event: any) => {
-      /*(event.numberOfDays == object.nb_days) &&
-        (object.location.indexOf(event.place) != 0) && */
 
-      console.log(event.start_date);
-      console.log(object.start_date);
+   this.displayed_events = this.displayed_events.filter((event: any) => 
+      (
+        (event.numberOfDays == object.nb_days) &&
+        (object.location.includes(event.place)) && 
 
-      return (
-        new Date(event.start_date).getTime() >=
-          new Date(object.start_date).getTime() &&
-        new Date(event.start_date).getTime() <=
-          new Date(object.start_date).getTime()
-      );
-    });
-  }
+
+      (
+        new Date(event.date).getTime() >=
+        new Date(object.start_date).getTime() &&
+        new Date(event.date).getTime() <=
+        new Date(object.end_date).getTime()
+          )
+      )
+    )
+   }
 }
