@@ -9,6 +9,11 @@
   margin-top: 20px;
 }
 
+.eventscards{
+  display: flex;
+  justify-content: space-between;
+}
+
 .my-col {
   /* float: left;*/
   /*width: 25%; */
@@ -30,4 +35,10 @@
   background-color: #27c1df;
   font-size: 14px;
   border: none;
+}
+
+
+img{
+  max-width: 100px;
+  max-height: 100px;
 }

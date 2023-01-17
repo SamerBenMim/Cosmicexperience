@@ -1,9 +1,9 @@
 p {
   text-align: center;
-  font-family: "Dancing Script", cursive !important;
-  font-size: 50px;
+  
+  font-size: 30px;
   margin-bottom: 1.5rem;
-  color: #9c9c9ca2;
+  color: #27c1df;
 }
 
 .container-upcoming {
@@ -11,6 +11,7 @@ p {
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .button-container {
   display: flex;
   justify-content: center;
