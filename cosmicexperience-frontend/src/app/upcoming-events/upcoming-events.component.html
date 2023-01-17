@@ -5,13 +5,8 @@
       <div class="container">
         <div class="row">
           <div class="col-sm my-col eventscards" >
-          <!-- <div class="col-sm my-col" *ngFor="let item of events"> -->
-            <!-- <app-event [event] = "item"> </app-event>-->
-              
-              <app-event></app-event>
-              <app-event></app-event>
-              <app-event></app-event>
-            
+          <div class="col-sm my-col" *ngFor="let item of events">
+            <app-event [event] = "item"> </app-event>
           </div>
         <div class="row">
         </div>
