@@ -21,7 +21,7 @@ export class EventComponent implements OnInit {
     if (value) {
       this.id = value.id;
       this.place = value.place;
-      this.image = '../../../../assets/img/uploads/' + value.image;
+      this.image = '../../../assets/images/upload/' + value.image;
       this.name = value.name;
       this.date = value.date;
       this.price = value.price;

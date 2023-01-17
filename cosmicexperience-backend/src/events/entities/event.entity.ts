@@ -25,8 +25,8 @@ export class Event {
   @Column( )
   date: Date;
 
-  @Column( { default: 0 })
-  numnberOfDays: number; 
+  @Column( { default: 1 })
+  numberOfDays: number; 
 
   @Column( { default: 0 })
   numberMaxOfParticipants: number;
