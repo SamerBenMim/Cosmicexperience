@@ -104,3 +104,10 @@ h2, h3 {
   left: 35%;
   bottom: 20px;
 }
+
+.congrat {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+}
