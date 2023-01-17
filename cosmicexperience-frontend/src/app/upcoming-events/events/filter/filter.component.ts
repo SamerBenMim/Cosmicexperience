@@ -16,6 +16,7 @@ export class FilterComponent implements OnInit {
   @Output() filter = new EventEmitter();
   @Input() set all_events(value:any) {
   if (value) {
+    console.log(value)
     let mapped = value.map(this.extract_places);
     this.placeList = mapped.filter((value: any,index: any)=> mapped.indexOf(value) === index);
   }
