@@ -9,13 +9,13 @@
   </a>
   <div class="spacer"></div>
   <div class="links-for-pc links-nav-container">
-    <a routerLink="/" mat-button>Home</a>
-    <a routerLink="/events" mat-button>Events</a>
+    <a routerLink="/" mat-button><mat-icon>home</mat-icon>Home</a>
+    <a routerLink="/events" mat-button><mat-icon>nights_stay</mat-icon>Events</a>
     <a *ngIf="!authService.isLogged()" routerLink="/login" mat-button
       ><mat-icon>login</mat-icon>Login</a
     >
     <a *ngIf="!authService.isLogged()" routerLink="/register" mat-button
-      ><mat-icon>app_registration</mat-icon>Register</a
+      ><mat-icon>group_add</mat-icon>SignUp</a
     >
     <a *ngIf="authService.isLogged()" routerLink="/profile" mat-button
       ><mat-icon>account_circle</mat-icon>Profile</a
