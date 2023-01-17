@@ -43,7 +43,7 @@ export class EventController {
 
   @Get('upComingEvents')
   async getUpcomingEvents(): Promise<Event[]> {
-    console.log("first")
+    console.log("firsttttt")
     return this.eventService.getUpcomingEvents();
   }
 

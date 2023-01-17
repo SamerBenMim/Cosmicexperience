@@ -69,6 +69,7 @@ export class EventService {
   }
 
   async getUpcomingEvents(): Promise<Event[]> {
+    console.log("events");
     const myDate = new Date();
     const events = await this.EventRepository.find({
       where: { date: MoreThan(myDate) },
