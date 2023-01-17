@@ -8,10 +8,10 @@ import {FormGroup, FormControl, FormsModule} from '@angular/forms';
 })
 export class FilterComponent implements OnInit {
   nb_days: any;
-  start_date: string;
-  end_date: string;
-  location:string[];
-  placeList: string[] ;
+  start_date!: string;
+  end_date!: string;
+  location!:string[];
+  placeList!: string[] ;
   place = new FormControl();
   @Output() filter = new EventEmitter();
   @Input() set all_events(value:any) {
