@@ -12,7 +12,7 @@
     <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
 </mat-form-field>
 
-<mat-form-field class="numbers">
+<mat-form-field class="numbers" appearance="fill">
     <mat-label>Number of days</mat-label>
     <input matInput [(ngModel)]="nb_days"  type="number" min="1" value="Number of days">
 </mat-form-field>
