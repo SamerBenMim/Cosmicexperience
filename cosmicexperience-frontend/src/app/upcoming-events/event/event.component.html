@@ -8,12 +8,14 @@
     </div>
     <div class="flip-card-back">
       <h1>{{ name }}</h1>
+      <br>
       <h2>Location: {{ place }}</h2>
       <h3>Starts on: {{ date | date }}</h3>
       <h3>Lasts for: {{ nbDays }} days</h3>
       <p>{{ description }}</p>
       <div class="bottom-text">
-        <p>Price: {{ price }}</p>
+        <p>Price: {{ price }} dt</p>
+        
         <button mat-button class="button" (click)="openDialog()">
           Join now!
         </button>
