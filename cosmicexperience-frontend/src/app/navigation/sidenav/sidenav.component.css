@@ -7,3 +7,7 @@
   background-color: #4a91a5;
   transition: all 0.3s ease-in-out;
 }
+
+mat-icon{
+  font-size: 12px;
+}

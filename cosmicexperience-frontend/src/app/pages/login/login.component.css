@@ -4,11 +4,12 @@
     height: 92vh;
     align-items: center;
     justify-content: center;
-    background-color: #557be754;
+    
 }
 
 .login-image {
     width: 100%;
+    opacity: 100%;
     object-fit: cover;
     height: 100vh;
     position: absolute;
@@ -41,7 +42,7 @@
 
 .login-button {
     margin-top: 1rem;
-    background-color: #383172;
+    background-color: #27c1df;
 }
 
 .terms-services {
@@ -54,7 +55,7 @@
 }
 
 .register-link>a {
-    background-color: #383172;
+    background-color: #27c1df;
     margin-left: 0.4rem;
     margin-right: 0.1rem;
 }

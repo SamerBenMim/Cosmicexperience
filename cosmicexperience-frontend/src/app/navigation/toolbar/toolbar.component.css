@@ -40,3 +40,8 @@ mat-toolbar {
     display: none;
   }
 }
+
+mat-icon{
+  font-size: 18px;
+  margin-left: 2px;
+}
