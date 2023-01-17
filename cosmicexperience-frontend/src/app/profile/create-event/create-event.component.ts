@@ -12,7 +12,7 @@ export class CreateEventComponent implements OnInit {
   description!: string;
   place!: string;
   date!: Date;
-  numnberOfDays!: number;
+  numberOfDays!: number;
   numberMaxOfParticipants!: number;
   price!: number;
   image!: string;
@@ -28,7 +28,7 @@ export class CreateEventComponent implements OnInit {
       this.description,
       this.place,
       this.date,
-      this.numnberOfDays,
+      this.numberOfDays,
       this.numberMaxOfParticipants,
       this.price,
       `${nb}.jpg`

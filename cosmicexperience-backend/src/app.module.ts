@@ -14,7 +14,7 @@ import { AuthModule } from './users/auth/auth.module';
       port: 3308,
       username: 'root',
       password: 'your_password',
-      database: 'cosmos',
+      database: 'your_database',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
