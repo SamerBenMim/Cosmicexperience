@@ -19,7 +19,7 @@ import { EventComponent } from './upcoming-events/event/event.component';
 import { AboutUsComponent } from './about-us/about-us/about-us.component';
 import { OurMissionComponent } from './about-us/our-mission/our-mission.component';
 import { WhoAreWeComponent } from './about-us/who-are-we/who-are-we.component';
-
+import { QuoteComponent } from './quote/quote.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
@@ -34,7 +34,13 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     SidenavComponent,
     FooterComponent,
     UpcomingEventsComponent,
-    EventComponent
+    EventComponent,
+    QuoteComponent,
+    ErrorPageComponent,
+    WhoAreWeComponent,
+    OurMissionComponent,
+    AboutUsComponent
+    
   ],
   imports: [
     BrowserModule,
