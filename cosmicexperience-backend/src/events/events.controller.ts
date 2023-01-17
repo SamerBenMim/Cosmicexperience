@@ -18,7 +18,7 @@ import { CreateEventDto } from './dto/create-event.dto';
 import { UpdateEventDto } from './dto/update-event.dto';
 import { Event } from './entities/event.entity';
 
-@Controller('cosmic')
+@Controller('cosmos')
 export class EventController {
   constructor(private readonly eventService: EventService) {}
 
@@ -43,6 +43,7 @@ export class EventController {
 
   @Get('upComingEvents')
   async getUpcomingEvents(): Promise<Event[]> {
+    console.log("first")
     return this.eventService.getUpcomingEvents();
   }
 
