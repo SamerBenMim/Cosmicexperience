@@ -16,6 +16,8 @@ export class LoginGuard implements CanActivate {
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree> {
     const token = localStorage.getItem('accessToken');
+
+    console.log('guard' , token)
     return !!token;
   }
 }
