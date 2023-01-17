@@ -4,6 +4,7 @@
   border:white;
   perspective: 1000px;
   background-color: transparent;
+  margin: 10px;
 }
 
 /* This container is needed to position the front and back side */
@@ -43,8 +44,17 @@
   background-color: rgb(43, 51, 58);
   color: white;
   transform: rotateY(180deg);
-  text-align: center;
+  text-align: left;
   padding-top:10%;
+  padding-left: 10%;
+}
+
+h1{
+  font-size: 20px;
+}
+h2, h3{
+  font-size: 16px;
+
 }
 
 .button{
