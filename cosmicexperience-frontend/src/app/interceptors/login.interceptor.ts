@@ -49,7 +49,10 @@ export class TokenInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     const accessToken = localStorage.getItem('accessToken');
+    console.log(request.headers) 
+    console.log(request.headers.get('Authorization'))
     if (accessToken) {
+  
       request = request.clone({
         setHeaders: {
           Authorization: `Bearer ${accessToken}`,
@@ -58,7 +61,7 @@ export class TokenInterceptor implements HttpInterceptor {
 
       return next.handle(request);
     }
-
+   
     return next.handle(request);
   }
 }
