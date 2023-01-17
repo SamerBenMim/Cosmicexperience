@@ -13,11 +13,10 @@ import { EditProfileComponent } from './profile/edit-profile/edit-profile.compon
 import { ProfileComponent } from './profile/profile/profile.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent, canActivate: [LogoutGuard] },
+  { path: 'login', component: LoginComponent},
   {
     path: 'register',
     component: RegisterComponent,
-    canActivate: [LogoutGuard],
   },
   { path: 'profile', component: ProfileComponent, canActivate: [LoginGuard] },
   {
