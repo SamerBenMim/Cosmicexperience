@@ -7,6 +7,7 @@ import {
 import { Observable } from 'rxjs';
 
 export class LogoutGuard implements CanActivate {
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -19,3 +20,11 @@ export class LogoutGuard implements CanActivate {
     return !token;
   }
 }
+
+  
+
+
+
+
+
+
