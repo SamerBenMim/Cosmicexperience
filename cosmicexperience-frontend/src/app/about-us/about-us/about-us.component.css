@@ -1,0 +1,23 @@
+.container-about-us {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.test {
+  margin-bottom: 1rem;
+}
+
+p {
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 30px;
+  line-height: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  margin-top: 20px;
+}

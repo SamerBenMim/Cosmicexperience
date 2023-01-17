@@ -6,12 +6,10 @@ import { LogoutGuard } from './guards/logout.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-
-import { CreateEventComponent } from './profile/create-event/create-event.component';
-import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 import { ProfileComponent } from './profile/profile/profile.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
+import { CreateEventComponent } from './profile/create-event/create-event.component';
 import { EventsComponent } from './upcoming-events/events/events.component';
-
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
@@ -31,7 +29,7 @@ const routes: Routes = [
     component: CreateEventComponent,
     // canActivate: [LoginGuard],
   },
-  { path: 'events', component: EventsComponent},
+  { path: 'events', component: EventsComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: ErrorPageComponent },
 ];
