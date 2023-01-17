@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EventCycling } from 'src/app/models/event';
+import { EventCosmic } from 'src/app/models/event';
 import { ProfileService } from '../profile.service';
 
 @Component({
@@ -23,7 +23,7 @@ export class CreateEventComponent implements OnInit {
 
   createEvent(): void {
     const nb = Math.floor(Math.random() * 31) + 1;
-    const event = new EventCycling(
+    const event = new EventCosmic(
       this.name,
       this.description,
       this.place,

@@ -29,8 +29,12 @@ import { EditProfileComponent } from './profile/edit-profile/edit-profile.compon
 import { CreateEventComponent } from './profile/create-event/create-event.component';
 import { EventsComponent } from './upcoming-events/events/events.component';
 import { PageComponent } from './upcoming-events/events/page/page.component';
-
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoginGuard } from './guards/login.guard';
+import { LogoutGuard } from './guards/logout.guard';
 import { FilterComponent } from './upcoming-events/events/filter/filter.component';
+import { EventsService } from './upcoming-events/events.service';
+import { TokenInterceptor } from './interceptors/login.interceptor';
 
 @NgModule({
   declarations: [
@@ -69,7 +73,16 @@ import { FilterComponent } from './upcoming-events/events/filter/filter.componen
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    EventsService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
+    LoginGuard,
+    LogoutGuard,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

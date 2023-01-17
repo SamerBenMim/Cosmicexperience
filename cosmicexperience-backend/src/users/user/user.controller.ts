@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Patch, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Patch, UseGuards ,Request} from '@nestjs/common';
 import { GetUser } from '../auth/get-user.decorator';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -16,6 +16,7 @@ export class UserController {
     @GetUser() user: User,
     @Body() updateUserDto: UpdateUserDto,
   ): Promise<UserDto> {
+    console.log("requete fl back")
     return this.userService.updateUser(user, updateUserDto);
   }
 
