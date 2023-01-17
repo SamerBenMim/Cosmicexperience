@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Patch, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Patch, UseGuards ,Request} from '@nestjs/common';
 import { GetUser } from '../auth/get-user.decorator';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -16,10 +16,11 @@ export class UserController {
     @GetUser() user: User,
     @Body() updateUserDto: UpdateUserDto,
   ): Promise<UserDto> {
+    console.log("requete fl back")
     return this.userService.updateUser(user, updateUserDto);
   }
 
-  @UseGuards(JwtAuthGuard)
+  // @UseGuards(JwtAuthGuard)
   @Get('upComingEvent')
   async getUpComingEventsOfUser(@GetUser() user: User) {
     const events = await (
@@ -31,7 +32,7 @@ export class UserController {
     return events.filter((event) => event.date.getTime() > myDate.getTime());
   }
 
-  @UseGuards(JwtAuthGuard)
+  // @UseGuards(JwtAuthGuard)
   @Get('latestEvents')
   async getLatestEventsOfUser(@GetUser() user: User) {
     const events = await (
