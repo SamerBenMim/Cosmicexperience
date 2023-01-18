@@ -9,7 +9,8 @@ export class EventsComponent implements OnInit {
   events: any;
   pages: number[] = [];
   num: number = 1;
-  displayed_events: any;
+  displayed_events:  any [] = [];
+  arr:  any [] = [];
   constructor(private eventsService: EventsService) {}
 
   ngOnInit(): void {
@@ -29,6 +30,7 @@ export class EventsComponent implements OnInit {
         (this.num - 1) * 6,
         this.num * 6
       );
+      this.arr =  [...this.displayed_events];
     });
   }
 
@@ -48,22 +50,28 @@ export class EventsComponent implements OnInit {
     var dateB: any = new Date(b.date);
     return dateA - dateB;
   }
-
   filterDisplayed(object: any) {
+    
+     this.arr= this.displayed_events.filter((event: any) => {
+     console.log(event.numberOfDays , object.nb_days)
+      return (
+         (event.numberOfDays == object.nb_days) 
+           &&
+           (!object.location || object?.location?.includes(event.place))
+            && 
+     
+     
+         (
+           !object.start_date || !object.end_date || (
+           new Date(event.date).getTime() >=
+           new Date(object.start_date).getTime() &&
+           new Date(event.date).getTime() <=
+           new Date(object.end_date).getTime()
+             ))
+        )
+      }
+        )
+        }
 
-   this.displayed_events = this.displayed_events.filter((event: any) => 
-      (
-        (event.numberOfDays == object.nb_days) &&
-        (object.location.includes(event.place)) && 
-
-
-      (
-        new Date(event.date).getTime() >=
-        new Date(object.start_date).getTime() &&
-        new Date(event.date).getTime() <=
-        new Date(object.end_date).getTime()
-          )
-      )
-    )
-   }
-}
+    }
+    
