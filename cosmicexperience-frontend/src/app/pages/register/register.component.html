@@ -17,6 +17,8 @@
           matInput
           required
           placeholder="First Name"
+          minlength="4"
+
         />
       </mat-form-field>
 
@@ -29,6 +31,8 @@
           required
           matInput
           placeholder="Last Name"
+          minlength="4"
+
         />
       </mat-form-field>
 
@@ -41,6 +45,8 @@
           required
           matInput
           placeholder="Username"
+          minlength="4"
+
         />
       </mat-form-field>
 
@@ -53,6 +59,9 @@
           required
           matInput
           placeholder="Ex. pat@example.com"
+          minlength="4"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+
         />
       </mat-form-field>
 
