@@ -23,3 +23,7 @@ a:hover {
   text-transform: uppercase;
   position: relative;
 }
+.main {
+  min-height: 539px;
+  display: block;
+}

@@ -35,6 +35,7 @@ import { LogoutGuard } from './guards/logout.guard';
 import { FilterComponent } from './upcoming-events/events/filter/filter.component';
 import { EventsService } from './upcoming-events/events.service';
 import { TokenInterceptor } from './interceptors/login.interceptor';
+import { DefaultImagePipe } from './pipe/default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { TokenInterceptor } from './interceptors/login.interceptor';
     CreateEventComponent,
     EventsComponent,
     PageComponent,
-    FilterComponent
+    FilterComponent,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,
@@ -72,6 +74,7 @@ import { TokenInterceptor } from './interceptors/login.interceptor';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    
   ],
   providers: [
     EventsService,
