@@ -1,4 +1,5 @@
-import { Body, Controller, Get, Patch, UseGuards ,Request} from '@nestjs/common';
+import { Body, Controller, Get, Patch, UseGuards ,Request, Post} from '@nestjs/common';
+import { EventService } from 'src/events/events.service';
 import { GetUser } from '../auth/get-user.decorator';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -8,7 +9,9 @@ import { UserService } from './user.service';
 
 @Controller('user')
 export class UserController {
-  constructor(private readonly userService: UserService) { }
+  constructor(
+    private readonly userService: UserService
+  ) {}
 
   @UseGuards(JwtAuthGuard)
   @Patch()
@@ -43,4 +46,6 @@ export class UserController {
 
     return events.filter((event) => event.date.getTime() < myDate.getTime());
   }
+
+
 }

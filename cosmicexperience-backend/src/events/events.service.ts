@@ -85,7 +85,7 @@ export class EventService {
     try {
       return await this.EventRepository.find();
     } catch (error) {
-      throw new BadRequestException('error while finding events');
+      throw new BadRequestException('errorsssssssssssssssssssssssssssssss while finding events');
     }
   }
 
@@ -93,36 +93,41 @@ export class EventService {
     try {
       return await this.EventRepository.findOne(id);
     } catch (error) {
-      throw new BadRequestException(`error while finding event with id ${id}`);
+      throw new BadRequestException(`errorwwwwwwwwww while finding event with id ${id}`);
     }
   }
 
   async updateEventById(
     id: number,
     updateEventDto: UpdateEventDto,
-    user: User,
+    user: string,
   ): Promise<Event> {
+    console.log('***********************************',
+      id,
+      updateEventDto,
+      user,
+    );
     try {
       let result = await this.findEventById(id);
+      console.log("zzzzzzzzzzzz",result)
       // check if the user is the owner of the event
-      console.log(user.eventsCreated);
       let owner = false;
-      user.eventsCreated.forEach((item) => {
-        if (item.id == id) {
-          owner = true;
-        }
-      });
+    //   user.eventsCreated.forEach((item) => {
+    //     if (item.id == id) {
+    //       owner = true;
+    //     }
+    //   });
 
-      // if he's not the owner throw an exception
-      if (owner == false) {
-        throw new BadRequestException();
-      }
+    // //  if he's not the owner throw an exception
+    //   if (owner == false) {
+    //     throw new BadRequestException();
+    //   }
 
       result = { ...result, ...updateEventDto };
       await this.EventRepository.update(id, result);
       return result;
     } catch (error) {
-      throw new BadRequestException(`error while finding event with id ${id}`);
+      console.log(error)
     }
   }
 
@@ -135,4 +140,6 @@ export class EventService {
     }
     throw new BadRequestException(`error while deleting event with id ${id}`);
   }
+
+
 }

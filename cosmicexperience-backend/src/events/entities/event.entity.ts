@@ -40,6 +40,9 @@ export class Event {
   @Column()
   price: number;
 
+  @Column()
+  comments: string;
+
   @ManyToOne(() => User, (user) => user.eventsCreated, { eager: false })
   organiser: User;
 

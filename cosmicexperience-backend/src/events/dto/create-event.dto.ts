@@ -8,4 +8,5 @@ export class CreateEventDto {
   price: number;
   image: string;
   organiser_id: number;
+  comments: string;
 }

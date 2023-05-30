@@ -70,7 +70,7 @@ export class EventController {
     @Body() updateEventDto: UpdateEventDto,
     @GetUser() user: User,
   ): Promise<Event> {
-    return this.eventService.updateEventById(id, updateEventDto, user);
+    return this.eventService.updateEventById(id, updateEventDto, user.username);
   }
 
   @Delete(':id')
@@ -82,5 +82,11 @@ export class EventController {
   @Get(':id')
   findEventById(@Param('id', ParseIntPipe) id: number): Promise<Event> {
     return this.eventService.findEventById(id);
+  }
+  @Post('comment')
+  @UseGuards(JwtAuthGuard)
+  async AddComment(@Body() body, @GetUser() user: User): Promise<any> {
+    console.log("body", body)
+    this.eventService.updateEventById(body.value.id, body.comment, user.username);
   }
 }

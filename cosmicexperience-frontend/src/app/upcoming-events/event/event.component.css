@@ -1,6 +1,6 @@
 .card {
-  width: 300px;
-  height: 400px;
+  width: 900px;
+  height: 800px;
   border: white;
   perspective: 1000px;
   background-color: transparent;
@@ -64,7 +64,7 @@ h2, h3 {
 }
 
 .button {
-  width: 100%;
+
   margin: auto;
   display: block;
   padding: 5px;
@@ -110,4 +110,55 @@ h2, h3 {
   justify-content: center;
   text-align: center;
   justify-content: center;
+}
+
+
+.joinbutton {
+
+  width: 30% !important;
+}
+
+
+
+
+.comment-input-div {
+  width: 70%;
+  margin-bottom: 50px;
+}
+
+.comment-input {
+  width: 80%;
+  height: 100px;
+  padding: 5px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.comment-input::placeholder {
+  color: #999;
+}
+
+.comment-input:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px #66afe9;
+}
+
+.comment-button {
+  width: 30% !important;
+
+}
+
+.single-comment {
+  width: 90%;
+  height: 8%;
+  background-color: rgb(96, 96, 96);
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: black;
 }

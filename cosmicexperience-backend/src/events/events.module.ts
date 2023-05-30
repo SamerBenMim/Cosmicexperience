@@ -11,4 +11,4 @@ import { AuthModule } from 'src/users/auth/auth.module';
   controllers: [EventController],
   providers: [EventService],
 })
-export class EventModule { }
+export class EventModule {}
