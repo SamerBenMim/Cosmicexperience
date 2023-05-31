@@ -9,13 +9,14 @@
     <div class="flip-card-back">
       <h1>{{ name }}</h1>
       <br>
-      <h2>Location: {{ place }}</h2>
+      <h3>Location: {{ place }} </h3>
       <h3>Starts on: {{ date | date }}</h3>
       <h3>Lasts for: {{ nbDays }} days</h3>
+      <h3>Price: {{ price }} dt</h3>
       <!-- <p >{{ description }}</p> -->
       <!-- Inside your template -->
       <p [innerHTML]="description"></p>
-      <p>Price: {{ price }} dt</p>
+     
         
         <button mat-button class="button joinbutton" (click)="openDialog()">
           Join now!
@@ -24,10 +25,19 @@
 
       
         
-
-        <div class="single-comment" *ngFor="let cmntr of comments"> 
+        
+        <div class="comments-section" *ngFor="let cmntr of comments"> 
           <p>{{cmntr}}</p>
         </div>
+        <div >
+          <p class="comment-title" >Comments</p>
+        </div>
+        <div class="comments-section"> 
+          <p class="single-comment">This events sounds so cool! Can't wait to join yall!</p>
+          <p class="single-comment">Been waiting fot this for ages! Sooo excited!</p>
+        </div>
+
+
         <div class="comment">
           <div lass="comment-input-div">
             <input  class="comment-input" type="text" [(ngModel)]="comment" placeholder="Add a comment">

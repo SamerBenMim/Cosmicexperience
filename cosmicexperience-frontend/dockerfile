@@ -1,0 +1,22 @@
+# Use an official Node.js LTS (Long Term Support) image as the base
+FROM node:lts
+
+# Set the working directory inside the container
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install the application dependencies
+RUN npm install
+
+# Copy the entire application code to the working directory
+COPY . .
+
+# Build the Angular app for production
+
+# Expose the default port (change it if your Angular app uses a different port)
+EXPOSE 4200
+
+# Start the Angular application
+CMD [ "npm", "start", "--", "--host", "0.0.0.0" ]

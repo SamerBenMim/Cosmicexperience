@@ -1,6 +1,6 @@
 .card {
   width: 900px;
-  height: 800px;
+  height: 1000px;
   border: white;
   perspective: 1000px;
   background-color: transparent;
@@ -92,8 +92,8 @@ h2, h3 {
 }
 
 .image {
-  width: 100%;
-  height: 400px;
+  width: 900px;
+  height: 1000px;
   border-radius: 5px;
 }
 
@@ -127,14 +127,15 @@ h2, h3 {
 }
 
 .comment-input {
-  width: 80%;
+  width: 90%;
   height: 100px;
   padding: 5px;
   margin-bottom: 30px;
-  border: 1px solid #ccc;
+  border: 3px solid #4a91a5;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
   font-size: 14px;
+  border-radius: 10px;
 }
 
 .comment-input::placeholder {
@@ -152,13 +153,40 @@ h2, h3 {
 
 }
 
-.single-comment {
+.comments-section {
   width: 90%;
-  height: 8%;
-  background-color: rgb(96, 96, 96);
+  height: 30%;
+  background-color: rgb(255, 255, 255);
   border: 1px solid #ccc;
   margin-bottom: 10px;
   padding: 10px;
   box-sizing: border-box;
   color: black;
+  margin-top: 2%;
+  border-radius: 10px;
+  border: 3px solid #4a91a5;
+}
+
+.single-comment {
+  width: 100%;
+  height: 30%;
+  background-color: #4a91a581;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: black;
+  border-radius: 15px;
+
+}
+
+.comment-title {
+  margin-top: 5%;
+  font-size: 24px;
+  color: #4a91a5;
+
+}
+
+.subtitle {
+  color: #4a91a5 !important;
 }

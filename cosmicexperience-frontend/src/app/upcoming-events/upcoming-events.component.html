@@ -4,11 +4,13 @@
     <div class="card-body">
       <div class="container">
         <div class="row">
+          <div class="col-sm my-col eventscards d-flex justify-content-center">
+
           <div class="col-sm my-col eventscards" >
-          <div class="col-sm my-col" *ngFor="let item of events">
-            <app-event [event] = "item"> </app-event>
-          </div>
-        <div class="row">
+         <div class="col-sm my-col center" *ngFor="let item of events; let first = first">
+         <app-event [event]="item" *ngIf="first"></app-event>
+</div>
+
         </div>
       </div>
     </div>

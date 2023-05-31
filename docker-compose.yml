@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: your_password
+      MYSQL_DATABASE: cosmos
+    ports:
+      - 3308:3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  nestjs:
+    build:
+      context: ./cosmicexperience-backend
+      dockerfile: dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - mysql
+
+  angular:
+    build:
+      context: ./cosmicexperience-frontend
+      dockerfile: dockerfile
+    restart: always
+    ports:
+      - 4200:4200
+    depends_on:
+      - nestjs
+
+volumes:
+  mysql_data:

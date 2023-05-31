@@ -1,6 +1,8 @@
 p {
-  text-align: center;
-  
+  text-align: left;
+  margin-left: 30 px;
+  padding-left: 30px;
+  padding-top: 50px;
   font-size: 30px;
   margin-bottom: 1.5rem;
   color: #27c1df;
