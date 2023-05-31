@@ -1,0 +1,31 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Angular app
+        run: docker build -t angular-app .
+
+      - name: Build Nest.js app
+        run: docker build -t nest-app .
+
+      - name: Run tests
+        run: |
+          docker run angular-app npm test
+          docker run nest-app npm test
+
+      - name: Deploy to production
+        run: |
+          docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+          docker push angular-app
+          docker push nest-app
